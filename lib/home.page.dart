@@ -12,15 +12,6 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.all(20),
-              width: double.infinity,
-              color: Colors.grey.shade300,
-              child: const Text(
-                'Make a simple counter with horizontal components using default flutter reactivity resources',
-              ),
-            ),
-            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 context.go('/value_notifier');
@@ -54,6 +45,16 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/stateful_builder');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Stateful Builder')),
+              ),
+            ),
           ],
         ),
       ),
