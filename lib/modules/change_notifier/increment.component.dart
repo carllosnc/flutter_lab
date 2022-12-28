@@ -11,13 +11,22 @@ class IncrementButton extends StatefulWidget {
 class IncrementButtonState extends State<IncrementButton> {
   final controller = CounterController();
 
+  action() {
+    setState(() {});
+  }
+
   @override
   void initState() {
-    controller.addListener(() {
-      setState(() {});
-    });
+    controller.addListener(action);
 
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.removeListener(action);
+
+    super.dispose();
   }
 
   @override

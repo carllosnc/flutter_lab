@@ -11,13 +11,21 @@ class DecrementButton extends StatefulWidget {
 class _DecrementButtonState extends State<DecrementButton> {
   final controller = CounterController();
 
+  void action() {
+    setState(() {});
+  }
+
   @override
   void initState() {
-    controller.addListener(() {
-      setState(() {});
-    });
+    controller.addListener(action);
 
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.removeListener(action);
+    super.dispose();
   }
 
   @override
