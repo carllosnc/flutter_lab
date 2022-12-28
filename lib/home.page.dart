@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
               child: const SizedBox(
                 height: 40,
                 width: double.infinity,
-                child: Center(child: Text('Value notifier')),
+                child: Center(child: Text('Value Notifier')),
               ),
             ),
             const SizedBox(height: 10),
@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
               child: const SizedBox(
                 height: 40,
                 width: double.infinity,
-                child: Center(child: Text('Change notifier')),
+                child: Center(child: Text('Change Notifier')),
               ),
             ),
             const SizedBox(height: 10),
