@@ -1,7 +1,8 @@
 import '/modules/stateful_builder/stateful_builder.page.dart';
-import '/modules/change_notifier/change_notifier.page.dart';
-import '/modules/value_notifier/value_notifier.page.dart';
-import '/modules/stream/stream.page.dart';
+import '/modules/change_notifier/change_notifier_page.dart';
+import '/modules/value_notifier/value_notifier_page.dart';
+import '/modules/stream/stream_page.dart';
+import '../modules/mixed_component/mixed_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +31,11 @@ final router = GoRouter(routes: [
         path: 'stateful_builder',
         name: 'stateful builder',
         builder: (context, state) => const StatefulBuilderPage(),
+      ),
+      GoRoute(
+        path: 'mixed_component',
+        name: 'mixed component',
+        builder: (context, state) => const MixedPage(),
       ),
     ],
   )

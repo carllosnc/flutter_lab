@@ -55,6 +55,17 @@ class HomePage extends StatelessWidget {
                 child: Center(child: Text('Stateful Builder')),
               ),
             ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/mixed_component');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Mixed Component')),
+              ),
+            ),
           ],
         ),
       ),

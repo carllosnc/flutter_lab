@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'decrement.component.dart';
-import 'increment.component.dart';
+import 'decrement_component.dart';
+import 'increment_component.dart';
 
 class ChangeNotifierPage extends StatelessWidget {
   const ChangeNotifierPage({super.key});

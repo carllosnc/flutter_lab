@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'decrement.component.dart';
-import 'increment.component.dart';
+import 'increment_component.dart';
+import 'decrement_component.dart';
 
-class ValueNotifierPage extends StatefulWidget {
-  const ValueNotifierPage({super.key});
+class StreamsPage extends StatefulWidget {
+  const StreamsPage({super.key});
 
   @override
-  State<ValueNotifierPage> createState() => _ValueNotifierPageState();
+  State<StreamsPage> createState() => StreamsPageState();
 }
 
-class _ValueNotifierPageState extends State<ValueNotifierPage> {
+class StreamsPageState extends State<StreamsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Value notifier')),
+      appBar: AppBar(title: const Text('Streams')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
