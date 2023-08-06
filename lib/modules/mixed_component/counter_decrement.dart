@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'counter_state.dart';
 
 mixin CounterDecrement on CounterState {

@@ -19,7 +19,7 @@ class _CounterState extends State<Counter>
       children: [
         incrementButton(),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
         decrementButton(),
       ],
