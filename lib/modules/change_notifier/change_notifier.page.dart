@@ -9,10 +9,10 @@ class ChangeNotifierPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Change Notifier')),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             IncrementButton(),
             SizedBox(height: 20),
             DecrementButton(),

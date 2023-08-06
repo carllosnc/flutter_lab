@@ -11,7 +11,7 @@ class DecrementButton extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: controller.counter,
       builder: (context, value, child) {
-        return (ElevatedButton(
+        return ElevatedButton(
           onPressed: () {
             controller.decrement();
           },
@@ -21,7 +21,7 @@ class DecrementButton extends StatelessWidget {
               child: Text('Decrement: $value'),
             ),
           ),
-        ));
+        );
       },
     );
   }
