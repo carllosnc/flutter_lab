@@ -1,8 +1,9 @@
+import '/modules/extended_component/extended_component_page.dart';
 import '/modules/stateful_builder/stateful_builder.page.dart';
 import '/modules/change_notifier/change_notifier_page.dart';
 import '/modules/value_notifier/value_notifier_page.dart';
 import '/modules/stream/stream_page.dart';
-import '../modules/mixed_component/mixed_page.dart';
+import '/modules/mixed_component/mixed_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -37,6 +38,11 @@ final router = GoRouter(routes: [
         name: 'mixed component',
         builder: (context, state) => const MixedPage(),
       ),
+      GoRoute(
+        path: 'extended_component',
+        name: 'extended component',
+        builder: (context, state) => const ExtendedComponentPage(),
+      )
     ],
   )
 ]);
