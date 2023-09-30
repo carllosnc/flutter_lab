@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Reactive')),
+      appBar: AppBar(title: const Text('Flutter Lab')),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -75,6 +75,17 @@ class HomePage extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: Center(child: Text('Extended Component')),
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/http_request');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('HTTP Request')),
               ),
             ),
           ],

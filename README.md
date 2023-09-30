@@ -1,6 +1,6 @@
-# Flutter reactive
+# Flutter Lab
 
-Some example about reactivity using only flutter resources without external packages.
+>Study notes, tests and experiments
 
 **Resources**
 
@@ -9,8 +9,8 @@ Some example about reactivity using only flutter resources without external pack
 - [Stream](https://www.youtube.com/watch?v=nQBpOIHE4eE&ab_channel=Flutter)
 - [Stateful Builder](https://www.youtube.com/watch?v=syvT63CosNE&ab_channel=Flutter)
 - Mixed component - wiget based on mixins
+- Extended components - widget based on extensions
 
 ---
 
 Carlos Costa 🥪 2022
-

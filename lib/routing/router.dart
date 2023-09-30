@@ -4,6 +4,7 @@ import '/modules/change_notifier/change_notifier_page.dart';
 import '/modules/value_notifier/value_notifier_page.dart';
 import '/modules/stream/stream_page.dart';
 import '/modules/mixed_component/mixed_page.dart';
+import '/modules/http_request/http_request_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -42,7 +43,12 @@ final router = GoRouter(routes: [
         path: 'extended_component',
         name: 'extended component',
         builder: (context, state) => const ExtendedComponentPage(),
-      )
+      ),
+      GoRoute(
+        path: 'http_request',
+        name: 'http_request',
+        builder: (context, state) => const HttpRequestPage(),
+      ),
     ],
   )
 ]);
