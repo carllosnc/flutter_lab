@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
-import 'decrement_component.dart';
-import 'increment_component.dart';
+import './increment_button.dart';
+import './decrement_button.dart';
 
-class ChangeNotifierPage extends StatelessWidget {
-  const ChangeNotifierPage({super.key});
+class GlobalStatePage extends StatelessWidget {
+  const GlobalStatePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Change Notifier')),
+      appBar: AppBar(
+        title: const Text('Change notifier'),
+      ),
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
+            Text(
+              'Change notifier',
+            ),
+            SizedBox(height: 10),
             IncrementButton(),
-            SizedBox(height: 20),
-            DecrementButton(),
+            SizedBox(height: 10),
+            DecrementButton()
           ],
         ),
       ),

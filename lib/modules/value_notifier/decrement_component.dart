@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 import 'controller.dart';
 
 class DecrementButton extends StatelessWidget {
-  DecrementButton({super.key});
-
-  final controller = CounterController();
+  const DecrementButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: controller.counter,
+      valueListenable: counter.count,
       builder: (context, value, child) {
         return ElevatedButton(
           onPressed: () {
-            controller.decrement();
+            counter.decrement();
           },
           child: SizedBox(
             width: 120,

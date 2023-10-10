@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CounterController {
-  static final _instance = CounterController._();
-
-  CounterController._();
-
-  factory CounterController() {
-    return _instance;
-  }
-
-  ValueNotifier<int> counter = ValueNotifier<int>(0);
+class _Counter {
+  ValueNotifier<int> count = ValueNotifier<int>(0);
 
   increment() {
-    counter.value++;
+    count.value++;
   }
 
   decrement() {
-    counter.value--;
+    count.value--;
   }
 }
+
+var counter = _Counter();

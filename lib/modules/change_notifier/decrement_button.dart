@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'controller.dart';
+import './state.dart';
 
 class DecrementButton extends StatefulWidget {
   const DecrementButton({super.key});
@@ -9,37 +9,27 @@ class DecrementButton extends StatefulWidget {
 }
 
 class _DecrementButtonState extends State<DecrementButton> {
-  final controller = CounterController();
-
-  void action() {
+  action() {
     setState(() {});
   }
 
   @override
   void initState() {
-    controller.addListener(action);
-
     super.initState();
+    counter.addListener(action);
   }
 
   @override
   void dispose() {
-    controller.removeListener(action);
+    counter.removeListener(action);
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        controller.decrement();
-      },
-      child: SizedBox(
-        width: 120,
-        child: Center(
-          child: Text('Decrement: ${controller.value}'),
-        ),
-      ),
+      onPressed: counter.decrement,
+      child: Text('Decrement ${counter.value}'),
     );
   }
 }

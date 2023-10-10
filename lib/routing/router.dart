@@ -1,10 +1,10 @@
 import '/modules/extended_component/extended_component_page.dart';
 import '/modules/stateful_builder/stateful_builder.page.dart';
-import '/modules/change_notifier/change_notifier_page.dart';
 import '/modules/value_notifier/value_notifier_page.dart';
 import '/modules/stream/stream_page.dart';
 import '/modules/mixed_component/mixed_page.dart';
 import '/modules/http_request/http_request_page.dart';
+import '/modules/change_notifier/change_notifier_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -14,11 +14,6 @@ final router = GoRouter(routes: [
     path: '/',
     builder: (context, state) => const HomePage(),
     routes: [
-      GoRoute(
-        path: 'change_notifier',
-        name: 'change notifier',
-        builder: (context, state) => const ChangeNotifierPage(),
-      ),
       GoRoute(
         path: 'value_notifier',
         name: 'value notifier',
@@ -48,6 +43,11 @@ final router = GoRouter(routes: [
         path: 'http_request',
         name: 'http_request',
         builder: (context, state) => const HttpRequestPage(),
+      ),
+      GoRoute(
+        path: 'global_state',
+        name: 'global state',
+        builder: (context, state) => const GlobalStatePage(),
       ),
     ],
   )

@@ -25,17 +25,6 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                context.go('/change_notifier');
-              },
-              child: const SizedBox(
-                height: 40,
-                width: double.infinity,
-                child: Center(child: Text('Change Notifier')),
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
                 context.go('/streams');
               },
               child: const SizedBox(
@@ -86,6 +75,17 @@ class HomePage extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: Center(child: Text('HTTP Request')),
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/global_state');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Change notifier')),
               ),
             ),
           ],

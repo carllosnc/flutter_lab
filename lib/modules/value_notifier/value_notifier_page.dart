@@ -14,12 +14,12 @@ class _ValueNotifierPageState extends State<ValueNotifierPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Value notifier')),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IncrementButton(),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             DecrementButton(),
           ],
         ),
