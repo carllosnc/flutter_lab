@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './state.dart';
+import 'counter/counter_mixin.dart';
+import 'counter/counter_state.dart';
 
 class DecrementButton extends StatefulWidget {
   const DecrementButton({super.key});
@@ -8,23 +9,7 @@ class DecrementButton extends StatefulWidget {
   State<DecrementButton> createState() => _DecrementButtonState();
 }
 
-class _DecrementButtonState extends State<DecrementButton> {
-  action() {
-    setState(() {});
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    counter.addListener(action);
-  }
-
-  @override
-  void dispose() {
-    counter.removeListener(action);
-    super.dispose();
-  }
-
+class _DecrementButtonState extends State<DecrementButton> with CounterMixin {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
