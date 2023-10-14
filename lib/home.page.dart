@@ -88,6 +88,17 @@ class HomePage extends StatelessWidget {
                 child: Center(child: Text('Change notifier')),
               ),
             ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/inherited_widgets');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Inherited Widgets')),
+              ),
+            ),
           ],
         ),
       ),
