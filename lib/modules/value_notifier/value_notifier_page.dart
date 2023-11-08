@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'decrement_component.dart';
 import 'increment_component.dart';
 
-class ValueNotifierPage extends StatefulWidget {
+class ValueNotifierPage extends StatelessWidget {
   const ValueNotifierPage({super.key});
 
-  @override
-  State<ValueNotifierPage> createState() => _ValueNotifierPageState();
-}
-
-class _ValueNotifierPageState extends State<ValueNotifierPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
