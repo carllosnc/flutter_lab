@@ -14,4 +14,4 @@ class _Counter extends ChangeNotifier {
   }
 }
 
-var counter = _Counter();
+final counter = _Counter();
