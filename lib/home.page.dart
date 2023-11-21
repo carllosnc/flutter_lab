@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                context.go('/global_state');
+                context.go('/change_notifier');
               },
               child: const SizedBox(
                 height: 40,
@@ -97,6 +97,17 @@ class HomePage extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: Center(child: Text('Inherited Widgets')),
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/responsive');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Responsive')),
               ),
             ),
           ],

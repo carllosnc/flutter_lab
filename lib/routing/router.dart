@@ -6,6 +6,7 @@ import '/modules/mixed_component/mixed_page.dart';
 import '/modules/http_request/http_request_page.dart';
 import '/modules/change_notifier/change_notifier_page.dart';
 import '/modules/inherited_widgets/inherited_widgets_page.dart';
+import '/modules/responsive/responsive_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -46,14 +47,19 @@ final router = GoRouter(routes: [
         builder: (context, state) => const HttpRequestPage(),
       ),
       GoRoute(
-        path: 'global_state',
-        name: 'global state',
-        builder: (context, state) => const GlobalStatePage(),
+        path: 'change_notifier',
+        name: 'chnage notifier',
+        builder: (context, state) => const ChangeNotifierPage(),
       ),
       GoRoute(
         path: 'inherited_widgets',
         name: 'inherited widgets',
         builder: (context, state) => const InheritedWidgetsPage(),
+      ),
+      GoRoute(
+        path: 'responsive',
+        name: 'responsive',
+        builder: (context, state) => const ResponsivePage(),
       ),
     ],
   )

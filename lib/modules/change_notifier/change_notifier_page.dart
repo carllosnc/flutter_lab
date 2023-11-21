@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import './increment_button.dart';
 import './decrement_button.dart';
 
-class GlobalStatePage extends StatelessWidget {
-  const GlobalStatePage({super.key});
+class ChangeNotifierPage extends StatelessWidget {
+  const ChangeNotifierPage({super.key});
 
   @override
   Widget build(BuildContext context) {
