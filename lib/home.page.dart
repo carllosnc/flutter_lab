@@ -121,6 +121,17 @@ class HomePage extends StatelessWidget {
                 child: Center(child: Text('Dynamic Widgets')),
               ),
             ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/signals');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Signals')),
+              ),
+            ),
           ],
         ),
       ),
