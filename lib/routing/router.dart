@@ -7,6 +7,7 @@ import '/modules/http_request/http_request_page.dart';
 import '/modules/change_notifier/change_notifier_page.dart';
 import '/modules/inherited_widgets/inherited_widgets_page.dart';
 import '/modules/responsive/responsive_page.dart';
+import '/modules/dynamic_widgets/dynamic_widgets_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -60,6 +61,11 @@ final router = GoRouter(routes: [
         path: 'responsive',
         name: 'responsive',
         builder: (context, state) => const ResponsivePage(),
+      ),
+      GoRoute(
+        path: 'dynamic_widgets',
+        name: 'dynamic widgets',
+        builder: (context, state) => const DynamicWidgetPage(),
       ),
     ],
   )
