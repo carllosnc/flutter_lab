@@ -9,6 +9,7 @@ import '/modules/inherited_widgets/inherited_widgets_page.dart';
 import '/modules/responsive/responsive_page.dart';
 import '/modules/dynamic_widgets/dynamic_widgets_page.dart';
 import '/modules/signals/signals_page.dart';
+import '/modules/overlay_portal/overlay_portal_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -72,6 +73,11 @@ final router = GoRouter(routes: [
         path: 'signals',
         name: 'signals',
         builder: (context, state) => const SignalsPage(),
+      ),
+      GoRoute(
+        path: 'overlay_portal',
+        name: 'overlay portal',
+        builder: (context, state) => const OverlayPortalPage(),
       ),
     ],
   )

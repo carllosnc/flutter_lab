@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Flutter Lab')),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
@@ -130,6 +130,17 @@ class HomePage extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: Center(child: Text('Signals')),
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/overlay_portal');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(child: Text('Overlay Portal')),
               ),
             ),
           ],
