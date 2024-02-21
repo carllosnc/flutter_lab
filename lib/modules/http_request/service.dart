@@ -11,19 +11,18 @@ sealed class Service {
 
     var response = await http.get(url);
 
-    //verifica se a requisição foi bem sucedida
+    //check if the response is not 200
     if (response.statusCode != 200) {
       throw Exception("Error while fetching data");
     }
 
-    //deserializa o body da resposta
+    //deserializes the response body
     var body = jsonDecode(response.body);
 
-    //lista de users
     var users = <User>[];
 
     for (var user in body) {
-      //adiciona cada user na lista
+      //add the user to the list
       users.add(User.fromJson(user));
     }
 

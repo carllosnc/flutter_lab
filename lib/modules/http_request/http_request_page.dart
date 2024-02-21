@@ -18,21 +18,21 @@ class _HttpRequestPageState extends State<HttpRequestPage> with UserQuery {
 
   @override
   Widget build(BuildContext context) {
-    // Se isLoading for true, exibe um loading
+    // if true, show a CircularProgressIndicator
     if (isLoading) {
       return const Scaffold(
         body: Center(child: CircularProgressIndicator()),
       );
     }
 
-    // Se isError for true, exibe um Text com a mensagem de erro
+    // is isError for true, show the error message
     if (isError) {
       return Scaffold(
         body: Center(child: Text(errorMessage!)),
       );
     }
 
-    // Se isSucess for true, exibe a lista de usuários
+    // is IsSucess for true, show the list of users
     return Scaffold(
       appBar: AppBar(
         title: const Text('HTTP Request'),
