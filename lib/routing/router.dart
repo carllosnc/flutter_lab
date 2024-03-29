@@ -11,6 +11,10 @@ import '/modules/dynamic_widgets/dynamic_widgets_page.dart';
 import '/modules/signals/signals_page.dart';
 import '/modules/overlay_portal/overlay_portal_page.dart';
 import '/modules/isolates/isolates_page.dart';
+import '/modules/canvas/canvas_page.dart';
+import '/modules/layouts/layouts_page.dart';
+import '/modules/gemini/gemini_page.dart';
+import '/modules/animations/animations_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -84,6 +88,26 @@ final router = GoRouter(routes: [
         path: 'isolates',
         name: 'isolates',
         builder: (context, state) => const IsolatesPage(),
+      ),
+      GoRoute(
+        path: 'canvas',
+        name: 'canvas',
+        builder: (context, state) => const CanvasPage(),
+      ),
+      GoRoute(
+        path: 'layouts',
+        name: 'layouts',
+        builder: (context, state) => const LayoutsPage(),
+      ),
+      GoRoute(
+        path: 'gemini',
+        name: 'gemini',
+        builder: (context, state) => const GeminiPage(),
+      ),
+      GoRoute(
+        path: 'animations',
+        name: 'animations',
+        builder: (context, state) => const AnimationsPage(),
       ),
     ],
   )

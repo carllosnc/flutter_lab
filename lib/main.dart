@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:flutter_reactive/app.dart';
 import 'package:flutter_reactive/modules/signals/signals.dart';
 import 'package:signals/signals.dart';
 
 void main(List<String> args) {
+  Gemini.init(apiKey: "AIzaSyA30UnpBZJHsXyirR4Ivoz2IEvnmhtOn_I");
+
   effect(() {
     debugPrint('counter: ${counter.value}');
     debugPrint('fontSize: ${fontSize.value}');
