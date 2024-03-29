@@ -5,7 +5,7 @@ import 'package:flutter_reactive/modules/signals/signals.dart';
 import 'package:signals/signals.dart';
 
 void main(List<String> args) {
-  Gemini.init(apiKey: "AIzaSyA30UnpBZJHsXyirR4Ivoz2IEvnmhtOn_I");
+  Gemini.init(apiKey: "");
 
   effect(() {
     debugPrint('counter: ${counter.value}');
