@@ -10,8 +10,7 @@ class Counter extends StatefulWidget {
   State<Counter> createState() => _CounterState();
 }
 
-class _CounterState extends State<Counter>
-    with CounterState, CounterIncrement, CounterDecrement {
+class _CounterState extends State<Counter> with CounterState, CounterIncrement, CounterDecrement {
   @override
   Widget build(BuildContext context) {
     return Column(

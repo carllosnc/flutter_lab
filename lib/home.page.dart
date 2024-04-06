@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import './modules/extensions/build_context.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -198,6 +199,31 @@ class HomePage extends StatelessWidget {
                 child: Center(child: Text('Animations')),
               ),
             ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                CustomSnack(context).showSnackBar('Custom SnackBar');
+
+                CustomDialog(context).showCustomDialog(
+                  title: 'Custom Dialog',
+                  message: 'This is a custom dialog',
+                  positiveText: 'OK',
+                  onPositive: () {
+                    Navigator.of(context).pop();
+                  },
+                  negativeText: 'Cancel',
+                  onNegative: () {
+                    Navigator.of(context).pop();
+                  },
+                );
+              },
+              child: const SizedBox(
+                width: double.infinity,
+                child: Center(
+                  child: Text('Custom SnackBar'),
+                ),
+              ),
+            )
           ],
         ),
       ),
