@@ -223,6 +223,19 @@ class HomePage extends StatelessWidget {
                   child: Text('Custom SnackBar'),
                 ),
               ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/rich_text');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(
+                  child: Text('Rich Text'),
+                ),
+              ),
             )
           ],
         ),
