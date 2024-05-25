@@ -102,34 +102,36 @@ class _RichTextPageState extends State<RichTextPage> {
       appBar: AppBar(
         title: const Text('Rich Text'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(30),
-        child: Column(
-          children: [
-            //input
-            TextField(
-              decoration: const InputDecoration(labelText: 'Enter text'),
-              controller: _textController,
-              onChanged: (value) => setState(() => text = value),
-            ),
-            const SizedBox(height: 20),
-            //output
-            VWRichText(
-              text: text,
-              textStyle: const TextStyle(fontSize: 20),
-              primaryColor: Colors.blue,
-              markColor: Colors.green,
-            ),
-            const SizedBox(height: 20),
-            const VWRichText(
-              textStyle: TextStyle(
-                fontSize: 24,
-                height: 1.5,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Column(
+            children: [
+              //input
+              TextField(
+                decoration: const InputDecoration(labelText: 'Enter text'),
+                controller: _textController,
+                onChanged: (value) => setState(() => text = value),
               ),
-              text:
-                  "<m>Lorem</m> <m><b><d>Ipsum</d></b></m> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <pc><i><b>standard</b></i></pc> dummy text ever since the 1500s, when an unknown printer took a galley of type and <b><o>scrambled</o></b> it to make a type specimen book.", //
-            ),
-          ],
+              const SizedBox(height: 20),
+              //output
+              VWRichText(
+                text: text,
+                textStyle: const TextStyle(fontSize: 20),
+                primaryColor: Colors.blue,
+                markColor: Colors.green,
+              ),
+              const SizedBox(height: 20),
+              const VWRichText(
+                textStyle: TextStyle(
+                  fontSize: 24,
+                  height: 1.5,
+                ),
+                text:
+                    "<m>Lorem</m> <m><b><d>Ipsum</d></b></m> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <pc><i><b>standard</b></i></pc> dummy text ever since the 1500s, when an unknown printer took a galley of type and <b><o>scrambled</o></b> it to make a type specimen book.", //
+              ),
+            ],
+          ),
         ),
       ),
     );

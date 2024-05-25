@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import './counter_state.dart';
-import './counter_increment.dart';
-import './counter_decrement.dart';
 
 class Counter extends StatefulWidget {
   const Counter({super.key});
@@ -10,17 +8,29 @@ class Counter extends StatefulWidget {
   State<Counter> createState() => _CounterState();
 }
 
-class _CounterState extends State<Counter> with CounterState, CounterIncrement, CounterDecrement {
+class _CounterState extends State<Counter> with CounterState {
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        incrementButton(),
+        ElevatedButton(
+          onPressed: increment,
+          child: SizedBox(
+            width: 120,
+            child: Center(child: Text('Increment: $value')),
+          ),
+        ),
         const SizedBox(
           height: 20,
         ),
-        decrementButton(),
+        ElevatedButton(
+          onPressed: decrement,
+          child: SizedBox(
+            width: 120,
+            child: Center(child: Text('Decrement: $value')),
+          ),
+        )
       ],
     );
   }
