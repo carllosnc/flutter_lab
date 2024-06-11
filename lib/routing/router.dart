@@ -16,6 +16,7 @@ import '/modules/layouts/layouts_page.dart';
 import '/modules/gemini/gemini_page.dart';
 import '/modules/animations/animations_page.dart';
 import '/modules/rich_text/rich_text_page.dart';
+import '/modules/sqlite/sqlite_page.dart';
 
 import '/home.page.dart';
 import 'package:go_router/go_router.dart';
@@ -114,6 +115,11 @@ final router = GoRouter(routes: [
         path: 'rich_text',
         name: 'rich text',
         builder: (context, state) => const RichTextPage(),
+      ),
+      GoRoute(
+        path: 'sqlite',
+        name: 'sqlite',
+        builder: (context, state) => const SqlitePage(),
       ),
     ],
   )

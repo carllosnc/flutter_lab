@@ -236,6 +236,19 @@ class HomePage extends StatelessWidget {
                   child: Text('Rich Text'),
                 ),
               ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go('/sqlite');
+              },
+              child: const SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: Center(
+                  child: Text('SQLite'),
+                ),
+              ),
             )
           ],
         ),

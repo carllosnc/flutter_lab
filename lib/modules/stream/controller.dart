@@ -1,24 +1,16 @@
 import 'dart:async';
 
 class CounterController {
-  static final _instance = CounterController._();
+  static int value = 0;
 
-  CounterController._();
+  static final controller = StreamController<int>.broadcast();
 
-  factory CounterController() {
-    return _instance;
-  }
-
-  final controller = StreamController<int>.broadcast();
-
-  int value = 0;
-
-  increment() {
+  static increment() {
     value++;
     controller.add(value);
   }
 
-  decrement() {
+  static decrement() {
     value--;
     controller.add(value);
   }

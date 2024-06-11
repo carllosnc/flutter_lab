@@ -3,8 +3,11 @@ import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:flutter_reactive/app.dart';
 import 'package:flutter_reactive/modules/signals/signals.dart';
 import 'package:signals/signals.dart';
+import './modules/sqlite/database.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   Gemini.init(apiKey: "");
 
   effect(() {
@@ -14,6 +17,8 @@ void main(List<String> args) {
     debugPrint('secondValue: ${secondValue.value}');
     debugPrint('sum: $sum');
   });
+
+  dogDatabase.init();
 
   runApp(const App());
 }

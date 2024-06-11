@@ -40,6 +40,12 @@ dependencies:
   json_annotation: ^4.8.1
   signals: ^1.5.9
   flutter_gemini: ^2.0.3
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+
+  gty:
+    git:
+      url: https://github.com/C4co/gty.git
 
 dev_dependencies:
   flutter_test:
