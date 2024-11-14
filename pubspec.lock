@@ -285,8 +285,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "57f84632ee1bb0a880b2b19c31f87abf153907ce"
-      url: "https://github.com/C4co/gty.git"
+      resolved-ref: "8e4a2de49a3c29f113814af97ccf040255bb66a0"
+      url: "https://github.com/carllosnc/gty.git"
     source: git
     version: "0.0.1"
   http:

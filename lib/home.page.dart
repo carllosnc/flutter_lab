@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import './modules/extensions/build_context.dart';
+import './modules/hooks/hooks.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -249,7 +250,9 @@ class HomePage extends StatelessWidget {
                   child: Text('SQLite'),
                 ),
               ),
-            )
+            ),
+            const SizedBox(height: 10),
+            counter(),
           ],
         ),
       ),
