@@ -14,5 +14,3 @@
 ---
 
 Carlos Costa 🥪 2022
-
-This is a example of text, images and other widgets that I have created for my own use.  
