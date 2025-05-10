@@ -11,7 +11,7 @@ mixin UserQuery<T extends StatefulWidget> on State<T> {
 
   Future<void> getUsers() async {
     try {
-      var (_, data) = await Service.getUsers();
+      var (_, data) = await Service.fetchUsers();
 
       setState(() {
         isLoading = false;
