@@ -6,7 +6,7 @@ import './models/user/user.dart';
 sealed class Service {
   HttpClient client = HttpClient();
 
-  static Future<(http.Response, List<User>)> getUsers() async {
+  static Future<(http.Response, List<User>)> fetchUsers() async {
     var url = Uri.parse("https://jsonplaceholder.typicode.com/users");
 
     var response = await http.get(url);
